@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $DB_PORT:$DB_PORT
+    expose:
+      - $DB_PORT
+    volumes:
+      - db:/var/lib/mysql
+
+  app:
+    depends_on:
+      - db
+    build: ./app
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $APP_PORT:$APP_PORT
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
