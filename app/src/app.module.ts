@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { PodcastModule } from './podcasts/podcast.module';
 
 import dbConfiguration from './config/db.config';
+import { DataSource } from 'typeorm';
 
 @Module({
   imports: [
@@ -24,4 +25,6 @@ import dbConfiguration from './config/db.config';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private dataSource: DataSource) {}
+}
