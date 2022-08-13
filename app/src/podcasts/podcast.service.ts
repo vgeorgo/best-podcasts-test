@@ -23,7 +23,10 @@ export class PodcastService {
     return this.podcastsRepository.findOneBy({ id });
   }
 
-  async paginate(options: IPaginationOptions): Promise<Pagination<Podcast>> {
-    return paginate<Podcast>(this.podcastsRepository, options);
+  async paginate(
+    where: object,
+    options: IPaginationOptions,
+  ): Promise<Pagination<Podcast>> {
+    return paginate<Podcast>(this.podcastsRepository, options, { where });
   }
 }

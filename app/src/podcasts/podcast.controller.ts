@@ -6,6 +6,7 @@ import {
   ParseIntPipe,
   Query,
 } from '@nestjs/common';
+import { NoPaginationPipe } from 'src/common/pipes/no-pagination.pipe';
 import { PaginationResponse } from 'src/common/response/pagination.response';
 import { Podcast } from './podcast.entity';
 import { PodcastService } from './podcast.service';
@@ -28,11 +29,11 @@ export class PodcastController {
   async getBest(
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page = 1,
     @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit = 10,
+    @Query(new NoPaginationPipe()) where = {},
   ): Promise<PaginationResponse<Podcast>> {
-    const response = await this.podcastService.paginate({
-      page,
-      limit,
-    });
-    return new PaginationResponse(response, 'podcasts');
+    return new PaginationResponse(
+      await this.podcastService.paginate(where, { page, limit }),
+      'podcasts',
+    );
   }
 }
