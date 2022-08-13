@@ -6,7 +6,6 @@ import {
   ParseIntPipe,
   Query,
 } from '@nestjs/common';
-import { Pagination } from 'nestjs-typeorm-paginate';
 import { PaginationResponse } from 'src/common/response/pagination.response';
 import { Podcast } from './podcast.entity';
 import { PodcastService } from './podcast.service';
