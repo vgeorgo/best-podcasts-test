@@ -50,8 +50,8 @@ export class Podcast {
   @Column()
   website: string;
 
-  @Column('text')
-  extra: string;
+  @Column('json')
+  extra: object;
 
   @Column({ default: false })
   is_claimed: boolean;
@@ -62,9 +62,9 @@ export class Podcast {
   @Column()
   type: string;
 
-  @Column('text')
+  @Column('json')
   looking_for: object;
 
-  @Column('text')
+  @Column('json')
   genre_ids: Array<number>;
 }
