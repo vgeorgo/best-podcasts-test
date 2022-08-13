@@ -7,6 +7,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { Pagination } from 'nestjs-typeorm-paginate';
+import { PaginationResponse } from 'src/common/response/pagination.response';
 import { Podcast } from './podcast.entity';
 import { PodcastService } from './podcast.service';
 
@@ -25,14 +26,14 @@ export class PodcastController {
   }
 
   @Get('/best_podcasts')
-  getBest(
+  async getBest(
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page = 1,
     @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit = 10,
-  ): Promise<Pagination<Podcast>> {
-    limit = limit > 100 ? 100 : limit;
-    return this.podcastService.paginate({
+  ): Promise<PaginationResponse<Podcast>> {
+    const response = await this.podcastService.paginate({
       page,
       limit,
     });
+    return new PaginationResponse(response, 'podcasts');
   }
 }
