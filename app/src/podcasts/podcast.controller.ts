@@ -1,15 +1,8 @@
-import {
-  Controller,
-  DefaultValuePipe,
-  Get,
-  Param,
-  ParseIntPipe,
-  Query,
-  UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
-import { NoPaginationPipe } from 'src/common/pipes/no-pagination.pipe';
+import { PaginationQueryDto } from 'src/common/dtos/pagination-query.dto';
 import { PaginationResponse } from 'src/common/response/pagination.response';
+import { PodcastQueryDto } from './podcast-query.dto';
 import { Podcast } from './podcast.entity';
 import { PodcastService } from './podcast.service';
 
@@ -29,12 +22,12 @@ export class PodcastController {
 
   @Get('/best_podcasts')
   async getBest(
-    @Query('page', new DefaultValuePipe(1), ParseIntPipe) page = 1,
-    @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit = 10,
-    @Query(new NoPaginationPipe()) where = {},
+    @Query() pagination: PaginationQueryDto,
+    @Query() where: PodcastQueryDto,
   ): Promise<PaginationResponse<Podcast>> {
+    console.log({ ...where });
     return new PaginationResponse(
-      await this.podcastService.paginate(where, { page, limit }),
+      await this.podcastService.paginate(where, { ...pagination }),
       'podcasts',
     );
   }
@@ -42,12 +35,11 @@ export class PodcastController {
   @UseGuards(JwtAuthGuard)
   @Get('/auth_best_podcasts')
   async getAuthBest(
-    @Query('page', new DefaultValuePipe(1), ParseIntPipe) page = 1,
-    @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit = 10,
-    @Query(new NoPaginationPipe()) where = {},
+    @Query() pagination: PaginationQueryDto,
+    @Query() where: PodcastQueryDto,
   ): Promise<PaginationResponse<Podcast>> {
     return new PaginationResponse(
-      await this.podcastService.paginate(where, { page, limit }),
+      await this.podcastService.paginate(where, { ...pagination }),
       'podcasts',
     );
   }
