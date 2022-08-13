@@ -36,7 +36,7 @@
         "listennotes_url":"https://www.listennotes.com/c/33bd629683d6413fae3dcc6d434c63a4/",
         "total_episodes":192,
         "explicit_content":0,
-        "description":"Your first podcast of the week is the last word in tech. Join the top tech pundits in a roundtable discussion of the latest trends in high tech.\n\nRecords live every Sunday at 5:15pm Eastern / 2:15pm Pacific / 21:15 UTC.",
+        "description":"Your first podcast of the week is the last word in tech. Join the top tech pundits in a roundtable discussion of the latest trends in high tech.Records live every Sunday at 5:15pm Eastern / 2:15pm Pacific / 21:15 UTC.",
         "itunes_id":73329404,
         "rss":"Please upgrade to the PRO plan to see this field",
         "latest_pub_date_ms":1592787156000,
@@ -49,7 +49,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           149,\n           157,\n           127,\n           140,\n           67,\n           93,\n           95,\n           99,\n           130,\n           131\n        ]"
+        "genre_ids":"[149,157,127,140,67,93,95,99,130,131]"
      },
      {
         "id":"64bfb34f7dd243a6a75123ff9158d497",
@@ -73,7 +73,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           127,\n           131\n        ]"
+        "genre_ids":"[140,67,127,131]"
      },
      {
         "id":"a5afc614d96048a2ae20bdd6136127b7",
@@ -97,7 +97,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           96,\n           97,\n           127,\n           128\n        ]"
+        "genre_ids":"[140,67,93,96,97,127,128]"
      },
      {
         "id":"8c64ce9c1afa49358ca5fb931a5edf22",
@@ -121,7 +121,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           93,\n           157,\n           97,\n           67,\n           100,\n           105,\n           127,\n           129\n        ]"
+        "genre_ids":"[140,93,157,97,67,100,105,127,129]"
      },
      {
         "id":"83262c8b71f943d9b8759e0ada6d4e8b",
@@ -145,7 +145,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           127,\n           140,\n           67,\n           93,\n           97,\n           100,\n           105,\n           111,\n           112\n        ]"
+        "genre_ids":"[127,140,67,93,97,100,105,111,112]"
      },
      {
         "id":"9006239f782246c5b17c33f5f76933f6",
@@ -169,7 +169,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           94,\n           97,\n           100,\n           105\n        ]"
+        "genre_ids":"[140,67,93,94,97,100,105]"
      },
      {
         "id":"a706b0a930b24e269bcf177432ce5ac6",
@@ -193,7 +193,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           127,\n           157,\n           140,\n           67,\n           128,\n           131,\n           143\n        ]"
+        "genre_ids":"[127,157,140,67,128,131,143]"
      },
      {
         "id":"083e27920aa049c7a4b035f3acb24272",
@@ -217,7 +217,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           127,\n           140,\n           67,\n           93,\n           94,\n           131\n        ]"
+        "genre_ids":"[127,140,67,93,94,131]"
      },
      {
         "id":"a9bd8a40e25e461292ad49a903c58de4",
@@ -241,7 +241,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           127,\n           122,\n           105,\n           100,\n           67\n        ]"
+        "genre_ids":"[140,127,122,105,100,67]"
      },
      {
         "id":"389c6ccb0e0449b9be5378f18e5bce4e",
@@ -265,7 +265,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           97,\n           100,\n           105,\n           127\n        ]"
+        "genre_ids":"[140,67,93,97,100,105,127]"
      },
      {
         "id":"57375bbc28cc42dfba375e1f9420add8",
@@ -289,7 +289,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           127,\n           128\n        ]"
+        "genre_ids":"[140,67,127,128]"
      },
      {
         "id":"9be0417a61ce4323a65a6785676f67b3",
@@ -313,7 +313,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           127,\n           131,\n           105\n        ]"
+        "genre_ids":"[140,67,93,127,131,105]"
      },
      {
         "id":"bebf78deac8f4909a65dfd25daad989d",
@@ -337,7 +337,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           127,\n           128,\n           105\n        ]"
+        "genre_ids":"[140,67,127,128,105]"
      },
      {
         "id":"60d9c48eba804965814cc466b6d224b7",
@@ -361,7 +361,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           100,\n           105,\n           127\n        ]"
+        "genre_ids":"[140,67,93,100,105,127]"
      },
      {
         "id":"6ff6656705c04e0f94166e2c086c21ec",
@@ -385,7 +385,7 @@
         "email":"Please upgrade to the PRO plan to see this field",
         "type":"episodic",
         "looking_for":"\"looking_for\":{ \"sponsors\":false, \"guests\":false, \"cohosts\":false, \"cross_promotion\":false }",
-        "genre_ids":"[\n           140,\n           67,\n           93,\n           94,\n           100,\n           105,\n           127,\n           129\n        ]"
+        "genre_ids":"[140,67,93,94,100,105,127,129]"
      }
   ],
   "total":45,
