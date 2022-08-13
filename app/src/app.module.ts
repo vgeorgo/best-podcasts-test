@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PodcastModule } from './podcasts/podcast.module';
 
 import dbConfiguration from './config/db.config';
 import { DataSource } from 'typeorm';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -20,10 +20,10 @@ import { DataSource } from 'typeorm';
         ...configService.get('database'),
       }),
     }),
+    AuthModule,
     PodcastModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {}

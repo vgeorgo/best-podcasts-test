@@ -18,19 +18,34 @@ docker-compose down -v
 
 Base URL: http://localhost:3004
 
-### GET /best_podcasts
+### POST /auth/login
+
+```
+curl --location --request POST 'http://localhost:3004/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{"username": "fake_user", "password": "pass"}'
+```
+
+### GET /best_podcasts (no auth required)
 
 ```
 curl --location --request GET 'http://localhost:3004/best_podcasts'
 ```
 
-### GET /podcasts
+### GET /auth_best_podcasts (auth required)
+
+```
+curl --location --request GET 'http://localhost:3004/auth_best_podcasts' \
+--header 'Authorization: Bearer access_token_generated_from_auth_login_route'
+```
+
+### GET /podcasts (no auth required)
 
 ```
 curl --location --request GET 'http://localhost:3004/podcasts'
 ```
 
-### GET /podcasts/:id
+### GET /podcasts/:id (no auth required)
 
 ```
 curl --location --request GET 'http://localhost:3004/podcasts/bebf78deac8f4909a65dfd25daad989d'
