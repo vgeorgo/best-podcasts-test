@@ -24,6 +24,8 @@ services:
       - $APP_PORT:$APP_PORT
     volumes:
       - ./app:/app
+      - /app/node_modules/
+      - /app/dist/
     stdin_open: true
     tty: true
 
