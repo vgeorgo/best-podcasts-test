@@ -25,7 +25,6 @@ export class PodcastController {
     @Query() pagination: PaginationQueryDto,
     @Query() where: PodcastQueryDto,
   ): Promise<PaginationResponse<Podcast>> {
-    console.log({ ...where });
     return new PaginationResponse(
       await this.podcastService.paginate(where, { ...pagination }),
       'podcasts',
