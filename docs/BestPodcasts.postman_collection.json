@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "91e53b22-9a37-44b1-89eb-a91839a4b46e",
+		"name": "Best Podcasts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21004849"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"fake_user\", \"password\": \"pass\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "best podcasts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/best_podcasts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"best_podcasts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "083e27920aa049c7a4b035f3acb24272",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "This",
+							"disabled": true
+						},
+						{
+							"key": "publisher",
+							"value": "twi",
+							"disabled": true
+						},
+						{
+							"key": "explicit_content",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "itunes_id",
+							"value": "1253186678",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "English",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "United States",
+							"disabled": true
+						},
+						{
+							"key": "is_claimed",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "episodic",
+							"disabled": true
+						},
+						{
+							"key": "genre_id",
+							"value": "140",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "best podcasts (authenticated)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmYWtlX2lkIiwidXNlcm5hbWUiOiJmYWtlX3VzZXJuYW1lIiwiaWF0IjoxNjYwNDA0OTQ2LCJleHAiOjE2NjA0MDUwNjZ9.v1TIRNZFrEwOBSvMXespCpKDg9TJ409XH6_SBE4H05I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/auth_best_podcasts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"auth_best_podcasts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "083e27920aa049c7a4b035f3acb24272",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "This",
+							"disabled": true
+						},
+						{
+							"key": "publisher",
+							"value": "twi",
+							"disabled": true
+						},
+						{
+							"key": "explicit_content",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "itunes_id",
+							"value": "1253186678",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "English",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "United States",
+							"disabled": true
+						},
+						{
+							"key": "is_claimed",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "episodic",
+							"disabled": true
+						},
+						{
+							"key": "genre_id",
+							"value": "140",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "podcasts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/podcasts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "podcasts by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/podcasts/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"podcasts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "083e27920aa049c7a4b035f3acb24272"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
