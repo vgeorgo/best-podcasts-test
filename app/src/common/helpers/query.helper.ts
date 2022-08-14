@@ -8,6 +8,8 @@ export function createFindOptionsWhere(
   const where: FindOptionsWhere<any> = {};
 
   Object.keys(query).forEach((column) => {
+    if (query[column] === undefined) return;
+
     const tableColumn = config.mapColumn.get(column) || column;
 
     if ((config.equal || []).includes(column))
